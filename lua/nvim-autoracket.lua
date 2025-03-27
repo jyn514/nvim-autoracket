@@ -21,7 +21,7 @@ local loaded_exts = false
 local lang_info = {}
 
 local function run_racket(look_ma_i_know_lisp, on_err)
-	local out = vim.system({'racket', '-e', look_ma_i_know_lisp }):wait()
+	local out = vim.system({'racket', '-l', 'racket/base', '-e', look_ma_i_know_lisp }):wait()
 	if out.stderr ~= '' then
 		error(on_err..': '..out.stderr)
 	end
