@@ -6,6 +6,18 @@ Unlike most ftplugins, this one does not configure a single language.
 Instead, it dynamically looks up info about the language at runtime from the racket API.
 This allows it to be extensible to any racket language, not just ones that are often used.
 
+Usage:
+```
+require('nvim-autoconfig').setup {}
+```
+
+There is exactly one configurable option:
+```
+setup {
+    disable_lsp = true,
+}
+```
+
 Features:
 - `filetype`
 - `commentstring`
